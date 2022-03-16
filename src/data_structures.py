@@ -22,14 +22,14 @@ class LinkedList:
         self.value = value
         self.next = next
 
-    def add_node(self, value: Node):
+    def add_element(self, value: Node):
         current_node = self
         while current_node.next is not None:
             current_node = current_node.next
 
         current_node.next = LinkedList(value=value)
 
-    def find_node(self, node_id: str) -> Optional[Node]:
+    def find_element(self, node_id: str) -> Optional[Node]:
         current_node = self
         while current_node is not None:
             if current_node.value.id == node_id:
@@ -38,7 +38,7 @@ class LinkedList:
 
         return None
 
-    def delete_node(self, node_id: str) -> None:
+    def delete_element(self, node_id: str) -> None:
         current_node = self
         previous_node = self
         has_node = False
@@ -78,7 +78,7 @@ class HashTable:
         if self.array[index] is None:
             self.array[index] = LinkedList(element)
         else:
-            self.array[index].add(element)
+            self.array[index].add_element(element)
 
     def _get_element_at(self, element_id: str, index: int) -> Optional[Node]:
         linked_list = self.array[index]

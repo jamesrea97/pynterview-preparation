@@ -1,7 +1,7 @@
 import unittest
 import copy
 
-from src.problems import ArrayProblems
+from src.cracking_code_problems import ArrayProblems
 
 
 class ArrayProblemsTests(unittest.TestCase):

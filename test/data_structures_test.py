@@ -22,7 +22,7 @@ class LinkedListTests(unittest.TestCase):
 
         mock_element_two = DataStructures.Node(id="two", data=84)
 
-        linked_list.add_node(mock_element_two)
+        linked_list.add_element(mock_element_two)
 
         self.assertEqual(linked_list.next.value, mock_element_two)
 
@@ -30,10 +30,10 @@ class LinkedListTests(unittest.TestCase):
         mock_element_one = DataStructures.Node(id="one", data=42)
         linked_list = DataStructures.LinkedList(mock_element_one)
         mock_element_two = DataStructures.Node(id="two", data=84)
-        linked_list.add_node(mock_element_two)
+        linked_list.add_element(mock_element_two)
 
-        self.assertIsNone(linked_list.find_node("three"))
-        self.assertEqual(linked_list.find_node("two"), mock_element_two)
+        self.assertIsNone(linked_list.find_element("three"))
+        self.assertEqual(linked_list.find_element("two"), mock_element_two)
 
     def test_delete_element(self):
         mock_element_one = DataStructures.Node(id="one", data=42)
@@ -46,9 +46,9 @@ class LinkedListTests(unittest.TestCase):
         linked_list = DataStructures.LinkedList(mock_element_three)
         linked_list = DataStructures.LinkedList(mock_element_four)
 
-        linked_list.delete_node("third")
+        linked_list.delete_element("third")
 
-        self.assertIsNone(linked_list.find_node("third"))
+        self.assertIsNone(linked_list.find_element("third"))
 
 
 class HashTableTests(unittest.TestCase):

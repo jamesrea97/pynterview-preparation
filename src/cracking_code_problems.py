@@ -1,6 +1,6 @@
 from typing import Callable
 import logging
-import data_structures as DataStructures
+import src.data_structures as DataStructures
 
 """
 Problems to revist:
@@ -299,4 +299,3 @@ class LinkListProblems:
 
     def remove_duplicates(linked_list: DataStructures.LinkedList, fn: Callable) -> None:
         pass
-    
